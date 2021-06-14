@@ -4,10 +4,10 @@ Requirement is to make anagram from the given two strings which may contain or m
 
 initially i took two strings
 
-    String a="";
-		String b="";
+    	String a="";
+	String b="";
 
-and then compared b0th strings with for lopps
+and then compared b0th strings with for lopps if str1 had the similar character it will add to a or it will add to deletion. 
 
     for(int i=0;i<str1.length();i++) 
 		{
@@ -20,7 +20,7 @@ and then compared b0th strings with for lopps
 			else deletions++;
 		}
     
-connverted string to char and then char to String
+connverted string to char and then char to String by using tiCharArray() and valueOf() methods and then sorted
   
     char[] ch = a.toCharArray();
 		Arrays.sort(ch);
@@ -28,8 +28,7 @@ connverted string to char and then char to String
 		ch = b.toCharArray();
 		Arrays.sort(ch);
 		b = String .valueOf(ch);
-    
-To repeated char which are not a part of both strings
+   to separate the unique values
 
     for(int i=0;i<unique.length();i++) 
         {
@@ -46,7 +45,7 @@ To repeated char which are not a part of both strings
             if(unique.charAt(i)!=b.charAt(ind2)) break;
             c2++;
 
-          }
+          }	  
 
           deletions += Math.abs(c1-c2);
         }
